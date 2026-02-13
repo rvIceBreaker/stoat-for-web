@@ -15,11 +15,6 @@ const REPLACEMENTS = {
   __VITE_HCAPTCHA_SITEKEY__: process.env.VITE_HCAPTCHA_SITEKEY || "",
 };
 
-// Also support REVOLT_PUBLIC_URL as an alias for VITE_API_URL (Helm chart compat)
-if (process.env.REVOLT_PUBLIC_URL && !process.env.VITE_API_URL) {
-  REPLACEMENTS.__VITE_API_URL__ = process.env.REVOLT_PUBLIC_URL;
-}
-
 (async () => {
   console.log("Preparing injected build...");
 
