@@ -5,12 +5,14 @@ on:
     branches:
       - master
       - main
+      - release
     tags:
       - "v*"
   pull_request:
     branches:
       - master
       - main
+      - release
 
 env:
   REGISTRY: ghcr.io
